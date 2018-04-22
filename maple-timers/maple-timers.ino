@@ -9,6 +9,8 @@
  */
 
 #define LED_PIN 33
+
+#define LED_PIN2 20
 #define BUTTON_PIN 31
 #define LED_RATE 900000    // in microseconds; should give 0.5Hz toggles
 
@@ -65,9 +67,9 @@ void loop() {
     // Run... while BUT is held, pause Count2
     for(int i = 0; i<1000; i++) {
         if(digitalRead(BUTTON_PIN)) {
-            Timer2.pause();
+            Timer4.pause();
         } else {
-            Timer2.resume();
+            Timer4.resume();
         }
         delay(1);
     }
